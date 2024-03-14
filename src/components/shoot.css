@@ -1,10 +1,14 @@
 @keyframes fireAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+  0% {
+    transform: translateX(0); /* Start from the left */
   }
-  
-  .animate-fire {
-    animation: fireAnimation 0.5s linear;
+  100% {
+    transform: translateX(
+      calc(100vw - 100%)
+    ); /* Move to the rightmost position */
   }
-  
+}
+
+.animate-fire {
+  animation: fireAnimation 0.5s linear forwards; /* Adjust duration as needed */
+}
